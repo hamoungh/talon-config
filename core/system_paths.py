@@ -8,6 +8,7 @@ custom paths.
 from pathlib import Path
 
 from talon import Module, actions, app
+import user.backup_community.plugin.talon_helpers.talon_helpers  # Registers talon_get_* actions
 
 mod = Module()
 mod.list("system_paths", desc="List of system paths")

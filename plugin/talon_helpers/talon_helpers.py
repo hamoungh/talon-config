@@ -23,7 +23,8 @@ def create_name(text, max_len=20):
 @mod.action_class
 class Actions:
     def talon_add_context_clipboard_python():
-        """Adds os-specific context info to the clipboard for the focused app for .py files. Assumes you've a Module named mod declared."""
+        """Adds os-specific context info to the clipboard for the focused app for .py files. Assumes you've
+ a Module named mod declared."""
         friendly_name = actions.app.name()
         # print(actions.app.executable())
         executable = os.path.basename(actions.app.executable())
@@ -97,7 +98,7 @@ class Actions:
         print("***********************")
 
     def talon_copy_list(name: str):
-        """Dumps the contents of list to the console"""
+        """Copies the contents of list to the clipboard"""
         print(f"**** Copied list {name} **** ")
         clip.set_text(pp.pformat(registry.lists[name]))
         print("***********************")
@@ -130,7 +131,7 @@ class Actions:
         return hostname
 
     def talon_get_active_application_info() -> str:
-        """Returns all active app info to the cliboard"""
+        """Returns all active app info"""
         result = str(ui.active_app())
         result += "\nActive window: " + str(ui.active_window())
         result += "\nWindows: " + str(ui.active_app().windows())
@@ -145,7 +146,7 @@ class Actions:
         return ui.active_window().cls
 
     def talon_version_info() -> str:
-        """Returns talon & operation system verison information"""
+        """Returns talon & operation system version information"""
         result = (
             f"Version: {app.version}, Branch: {app.branch}, OS: {platform.platform()}"
         )
@@ -167,4 +168,4 @@ class Actions:
 
     def talon_get_active_registry_list(name: str) -> ListTypeFull:
         """Returns the active list from the Talon registry"""
-        return registry.lists[name][-1]
+        return registry.lists[name][-1] 

@@ -84,10 +84,24 @@ def track_csv_list(
     write_csv_defaults(path, headers, default, is_spoken_form_first)
 
     def decorator(fn: CallbackT) -> CallbackT:
-        @resource.watch(str(path))
-        def on_update(f):
+        """Register a callback that is triggered whenever *filename* changes.
+
+        We use the Path instance directly (rather than its string representation)
+        because ``resource.watch`` expects either a Path or a glob pattern.  In
+        addition, we must return the *on_update* function so that Talon keeps a
+        reference to it; otherwise the watcher can be garbage-collected and the
+        decorator silently ends up returning *None*, which breaks imports that
+        rely on the decorated function later in the module.
+        """
+
+        @resource.watch(path)
+        def on_update(f):  # noqa: N802 – talon passes the open file object here
             data = read_csv_list(f, headers, is_spoken_form_first)
             fn(data)
+
+        # Expose the watcher so that callers can keep a reference if they want
+        # to (mirrors behaviour of track_file).
+        return on_update
 
     return decorator
 

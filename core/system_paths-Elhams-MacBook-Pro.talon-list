@@ -1,0 +1,16 @@
+list: user.system_paths
+hostname: Elhams-MacBook-Pro
+-
+user: /Users/elham
+desktop: /Users/elham/Desktop
+desk: /Users/elham/Desktop
+documents: /Users/elham/Documents
+docks: /Users/elham/Documents
+downloads: /Users/elham/Downloads
+music: /Users/elham/Music
+pictures: /Users/elham/Pictures
+videos: /Users/elham/Videos
+talon home: /Users/elham/.talon
+talon recordings: /Users/elham/.talon/recordings
+talon user: /Users/elham/.talon/user
+home: /Users/elham
