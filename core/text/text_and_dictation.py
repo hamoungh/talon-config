@@ -25,6 +25,7 @@ mod.list(
     "currency",
     desc="Currency types (e.g., dollars, euros) that can be used within prose",
 )
+mod.list("prose_contact", "List of contacts for dictation")
 
 ctx = Context()
 ctx_dragon = Context()
@@ -50,6 +51,7 @@ ctx.lists["user.minutes"] = get_spoken_form_under_one_hundred(
     include_oh_variant_for_single_digits=True,
     include_default_variant_for_single_digits=False,
 )
+ctx.lists["user.prose_contact"] = {}
 
 
 @mod.capture(rule="{user.prose_modifiers}")
@@ -167,7 +169,7 @@ def prose(m) -> str:
 )
 def raw_prose(m) -> str:
     """Mixed words and punctuation, auto-spaced & capitalized, without quote straightening and commands (for use in dictation mode)."""
-    return apply_formatting(m)
+    return apply_formatting(m).replace("“", '"').replace("”", '"')
 
 
 # For dragon, omit support for abbreviations and contacts
@@ -193,7 +195,7 @@ def prose_dragon(m) -> str:
 )
 def raw_prose_dragon(m) -> str:
     """Mixed words and punctuation, auto-spaced & capitalized, without quote straightening and commands (for use in dictation mode)."""
-    return apply_formatting(m)
+    return apply_formatting(m).replace("“", '"').replace("”", '"')
 
 
 # ---------- FORMATTING ---------- #
@@ -241,7 +243,7 @@ def apply_formatting(m):
 no_space_after = re.compile(
     r"""
   (?:
-    [\s\-_/#@([{‘“]     # characters that never need space after them
+    [\s\-_/#@([{'"]     # characters that never need space after them
   | (?<!\w)[$£€¥₩₽₹]    # currency symbols not preceded by a word character
   # quotes preceded by beginning of string, space, opening braces, dash, or other quotes
   | (?: ^ | [\s([{\-'"] ) ['"]
@@ -549,3 +551,9 @@ class Actions:
             actions.edit.left()
             actions.key("delete")  # remove space
         return before, after
+
+
+@mod.capture(rule="{user.prose_contact}")
+def prose_contact(m) -> str:
+    """A contact name for prose dictation."""
+    return str(m.prose_contact)

@@ -10,65 +10,66 @@ settings():
     # imgui.dark_mode = true
 
     # If `true`, automatically show the picker GUI when the file manager has focus
-    user.file_manager_auto_show_pickers = false
+    # DISABLED - Mouse not needed: user.file_manager_auto_show_pickers = false
 
     # Set the number of command lines to display per help page
-    user.help_max_command_lines_per_page = 50
+    # user.help_max_command_lines_per_page = 50
 
     # Set the number of contexts to display per help page
-    user.help_max_contexts_per_page = 20
+    # user.help_max_contexts_per_page = 20
 
     # Uncomment to always sort help contexts alphabetically.
     # user.help_sort_contexts_by_specificity = false
 
+    # MOUSE SETTINGS DISABLED - Physical mouse in use
     # Set the scroll amount for continuous scroll
-    user.mouse_continuous_scroll_amount = 8
+    # user.mouse_continuous_scroll_amount = 8
 
     # Set the scroll multiplier for gaze scroll
-    user.mouse_gaze_scroll_speed_multiplier = 1.0
+    # user.mouse_gaze_scroll_speed_multiplier = 1.0
 
     # Set the maximum acceleration factor when scrolling continuously. 1=constant speed/no acceleration.
-    user.mouse_continuous_scroll_acceleration = 1
+    # user.mouse_continuous_scroll_acceleration = 1
 
     # If `true`, stop continuous scroll/gaze scroll with a pop
-    user.mouse_enable_pop_stops_scroll = true
+    # user.mouse_enable_pop_stops_scroll = true
 
     # If `true`, stop mouse drag with a pop
-    user.mouse_enable_pop_stops_drag = true
+    # user.mouse_enable_pop_stops_drag = true
 
     # Choose how pop click should work in 'control mouse' mode
     # 0 = off
     # 1 = on with eyetracker but not zoom mouse mode
     # 2 = on but not with zoom mouse mode
-    user.mouse_enable_pop_click = 1
+    # user.mouse_enable_pop_click = 1
 
     # If `true`, use a hissing noise to scroll continuously
-    user.mouse_enable_hiss_scroll = false
+    # user.mouse_enable_hiss_scroll = false
 
     # How much time a hiss must last for to be considered a hiss rather than
     # part of speech, in ms
-    user.hiss_scroll_debounce_time = 100
+    # user.hiss_scroll_debounce_time = 100
 
     # If `true`, hide the continuous scroll/gaze scroll GUI
-    user.mouse_hide_mouse_gui = false
+    # user.mouse_hide_mouse_gui = false
 
     # If `true`, hide the cursor when enabling zoom mouse
-    user.mouse_wake_hides_cursor = false
+    # user.mouse_wake_hides_cursor = false
 
     # Set the amount to scroll up/down
-    user.mouse_wheel_down_amount = 120
+    # user.mouse_wheel_down_amount = 120
 
     # Set the amount to scroll left/right
-    user.mouse_wheel_horizontal_amount = 40
+    # user.mouse_wheel_horizontal_amount = 40
 
     # If `true`, start mouse grid numbering on the bottom left (vs. top left)
-    user.grids_put_one_bottom_left = true
+    # user.grids_put_one_bottom_left = true
 
     # Set the default number of command history lines to display
-    user.command_history_display = 10
+    # user.command_history_display = 10
 
     # Set the total number of command history lines to display
-    user.command_history_size = 50
+    # user.command_history_size = 50
 
     # Set the time window size for to for pop_twice_to_sleep and pop_twice_to_repeat. By default, the pops must be more than 0.1 seconds apart and less then 0.3 seconds, to reduce false positives
     user.double_pop_speed_minimum = 0.1
