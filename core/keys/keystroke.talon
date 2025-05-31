@@ -39,7 +39,8 @@ boot:                    key(backspace)
 <user.number_small> boot:         key(backspace:{user.number_small})
 pop up:      key(apps)
 
-pinj | copy: key(cmd-c)
+pinj: key(cmd-v)
+copy: key(cmd-c)
 cut:         key(cmd-x)
 duplicate <user.number_small>:
     key(cmd-c)
