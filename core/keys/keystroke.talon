@@ -19,15 +19,24 @@ follow:
     mouse(0)
     key(ctrl:up)
 
-[<user.number_small>] slap:                key(enter:{user.number_small})
-[<user.number_small>] tab:                 key(tab:{user.number_small})
-[<user.number_small>] dij:                 key(delete:{user.number_small})
-ditch [<user.number_small>] (line | lines):
+slap:                               key(enter)
+<user.number_small> slap:           key(enter:{user.number_small})
+tab:                                key(tab)
+<user.number_small> tab:            key(tab:{user.number_small})
+dij:                                key(delete)
+<user.number_small> dij:            key(delete:{user.number_small})
+ditch line:
+    key(home)
+    key(shift-down)
+    key(delete)
+
+ditch <user.number_small> (line | lines):
     key(home)
     key(shift-down:{user.number_small})
     key(delete)
 
-[<user.number_small>] boot:                key(backspace:{user.number_small})
+boot:                    key(backspace)
+<user.number_small> boot:         key(backspace:{user.number_small})
 pop up:      key(apps)
 
 pinj | copy: key(cmd-c)
