@@ -10,7 +10,7 @@ enter: keypad_enter
 page down: pagedown
 page up: pageup
 escape: escape
-jet: space
+joot: space
 soot: escape
 tab: tab
 insert: insert
