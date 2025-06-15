@@ -17,3 +17,4 @@ insert: insert
 wipe: backspace
 delete: backspace
 forward delete: delete
+slap: enter

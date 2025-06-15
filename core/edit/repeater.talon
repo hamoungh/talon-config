@@ -1,6 +1,6 @@
-<user.number_small> times:
+<number_small> times:
     repeat(number_small)
-repeat that <user.number_small> times:
+repeat that <number_small> times:
     repeat(number_small)
-and repeat that <user.number_small> times:
+and repeat that <number_small> times:
     repeat(number_small) 

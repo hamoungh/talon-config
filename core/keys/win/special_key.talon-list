@@ -19,3 +19,4 @@ delete: backspace
 forward delete: delete
 menu key: menu
 print screen: printscr
+slap: enter
