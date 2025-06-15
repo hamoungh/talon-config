@@ -18,3 +18,4 @@ wipe: backspace
 delete: backspace
 forward delete: delete
 slap: enter
+boot: backspace

@@ -20,3 +20,4 @@ forward delete: delete
 menu key: menu
 print screen: printscr
 slap: enter
+boot: backspace

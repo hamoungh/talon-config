@@ -11,3 +11,4 @@ press <user.modifiers>: key(modifiers)
 # for consistency with dictation mode and explicit arrow keys if you need them.
 press <user.keys>: key(keys)
 <user.number_key>: key(number_key)
+<user.arrow_key>: key(arrow_key)
