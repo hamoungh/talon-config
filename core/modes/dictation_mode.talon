@@ -13,51 +13,6 @@ cap: user.dictation_format_cap()
 ^(no cap | no-caps) that$: user.dictation_reformat_no_cap()
 ^(no space | no-space) that$: user.dictation_reformat_no_space()
 
-# Navigation
-go up <number_small> (line | lines):
-    edit.up()
-    repeat(number_small - 1)
-go down <number_small> (line | lines):
-    edit.down()
-    repeat(number_small - 1)
-go left <number_small> (word | words):
-    edit.word_left()
-    repeat(number_small - 1)
-go right <number_small> (word | words):
-    edit.word_right()
-    repeat(number_small - 1)
-go line start: edit.line_start()
-go line end: edit.line_end()
-
-# Selection
-select left <number_small> (word | words):
-    edit.extend_word_left()
-    repeat(number_small - 1)
-select right <number_small> (word | words):
-    edit.extend_word_right()
-    repeat(number_small - 1)
-select left <number_small> (character | characters):
-    edit.extend_left()
-    repeat(number_small - 1)
-select right <number_small> (character | characters):
-    edit.extend_right()
-    repeat(number_small - 1)
-clear left <number_small> (word | words):
-    edit.extend_word_left()
-    repeat(number_small - 1)
-    edit.delete()
-clear right <number_small> (word | words):
-    edit.extend_word_right()
-    repeat(number_small - 1)
-    edit.delete()
-clear left <number_small> (character | characters):
-    edit.extend_left()
-    repeat(number_small - 1)
-    edit.delete()
-clear right <number_small> (character | characters):
-    edit.extend_right()
-    repeat(number_small - 1)
-    edit.delete()
 
 # Formatting
 formatted <user.format_text>: user.dictation_insert_raw(format_text)
