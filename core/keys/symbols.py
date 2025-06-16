@@ -81,7 +81,7 @@ symbols = [
     Symbol("}", ["race"]),
     Symbol("<", ["langle"]),
     Symbol(">", None, ["rangle", "R angle", "right angle", "greater than"]),
-    Symbol("^", ["cart"]),
+    Symbol("^", ["kart"]),
     Symbol("|", ["bar"]),
     Symbol("'", ["squote", "single quote"]),
     Symbol('"', ["duote"]),
