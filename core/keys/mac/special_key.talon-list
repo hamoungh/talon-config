@@ -14,8 +14,9 @@ joot: space
 soot: escape
 tab: tab
 insert: insert
-wipe: backspace
-delete: backspace
 forward delete: delete
 slap: enter
-boot: backspace
+boot: bksp
+
+dij:                 key(del)
+<number_small> dij:  key(del:{number_small})

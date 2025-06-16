@@ -25,18 +25,10 @@ tab:                                key(tab)
 <number_small> tab:            key(tab:{number_small})
 dij:                                key(delete)
 <number_small> dij:            key(delete:{number_small})
-ditch line:
-    key(home)
-    key(shift-down)
-    key(delete)
 
-ditch <number_small> (line | lines):
-    key(home)
-    key(shift-down:{number_small})
-    key(delete)
 
-boot:                    key(backspace)
-<number_small> boot:         key(backspace:{number_small})
+boot:                    key(bksp)
+<number_small> boot:         key(bksp:{number_small})
 pop up:      key(apps)
 
 pinj: key(cmd-v)
