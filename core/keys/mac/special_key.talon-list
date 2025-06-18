@@ -17,6 +17,3 @@ insert: insert
 forward delete: delete
 slap: enter
 boot: bksp
-
-dij:                 key(del)
-<number_small> dij:  key(del:{number_small})

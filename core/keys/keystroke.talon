@@ -12,12 +12,6 @@
 
 home:        key(home)
 end:         key(end)
-doc home:    key(cmd-home)
-doc end:     key(cmd-end)
-follow:
-    key(ctrl:down)
-    mouse(0)
-    key(ctrl:up)
 
 slap:                               key(enter)
 <number_small> slap:           key("enter:{number_small}")
@@ -39,16 +33,6 @@ duplicate <number_small>:
     key("cmd-v:{number_small}")
 select all:  key(cmd-a)
 
-[hold] shi:  key(shift:down)
-shiffup:     key(shift:up)
-[hold] zoo:  key(ctrl:down)
-contup:      key(ctrl:up)
-[hold] az:   key(alt:down)
-altup:       key(alt:up)
-release all: key(shift:up ctrl:up alt:up)
-
-tux:         key(cmd-a)
-amplify:     key(cmd-+)
 
 
 inteli jey:  insert("intellij") 
