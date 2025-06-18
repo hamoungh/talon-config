@@ -35,4 +35,5 @@ select all:  key(cmd-a)
 
 
 
-inteli jey:  insert("intellij") 
+inteli jey:  insert("intellij")
+undo: key(cmd-z) 
