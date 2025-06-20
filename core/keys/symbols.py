@@ -67,7 +67,7 @@ symbols = [
     Symbol("%", ["pers"]),
     Symbol("@", ["atsi"]),
     Symbol("&", ["amphi"]),
-    Symbol("-", ["hyph"]),
+    Symbol("-", ["hife"]),
     Symbol("=", ["moss"]),
     Symbol("+", ["pulse"]),
     Symbol("_", ["zoor"]),
@@ -80,11 +80,11 @@ symbols = [
     Symbol("{", ["lace"]),
     Symbol("}", ["race"]),
     Symbol("<", ["langle"]),
-    Symbol(">", None, ["rangle", "R angle", "right angle", "greater than"]),
+    Symbol(">", ["rangle"]),
     Symbol("^", ["kart"]),
     Symbol("|", ["bar"]),
-    Symbol("'", ["squote", "single quote"]),
-    Symbol('"', ["duote"]),
+    Symbol("'", ["quote"]),
+    Symbol('"', ["doubt"]),
 ]
 
 # by convention, symbols should include currency symbols
