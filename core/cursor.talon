@@ -37,10 +37,10 @@ zi replace:                key(cmd-h)
 zi replace everywhere:     key(cmd-shift-h)
 zi resize:                 key(cmd-backslash)
 zi run:
-    key(end)
-    key(shift-home)
+    key(cmd-right)
+    key(shift-cmd-left)
     key(cmd-c)
-    key(cmd-`) 
+    key(ctrl-`)
     key(cmd-v)
     key(enter)
 
