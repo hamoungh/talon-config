@@ -20,7 +20,7 @@ symbols_for_create_spoken_forms = {
     "and": "&",
     # for emails
     "at": "@",
-    "dot": ".",
+    # "dot": ".",
     # for application names like "notepad++"
     "plus": "+",
 }
@@ -49,15 +49,14 @@ class Symbol:
             )
 
 currency_symbols = [
-    Symbol("$", ["dollar sign"], ["dollar"]),
-    Symbol("£", ["pound sign"], ["pound"]),
+    Symbol("$",  ["dollar"]),
 ]
 
 symbols = [
-    Symbol("`", ["back tick"], ["grave", "tick"]),
+    Symbol("`", ["tick"]),
     Symbol(",", ["kooch"]),
-    Symbol(".", ["period", "full stop"], ["dot", "point"]),
-    Symbol("!", ["exclamation mark", "exclamation point"], ["bang"]),
+    Symbol(".", ["period","dot"]),
+    Symbol("!", ["bang"]),
     Symbol("~", ["tilde"]),
     Symbol(";", ["semi"]),
     Symbol(":", ["colx"]),
