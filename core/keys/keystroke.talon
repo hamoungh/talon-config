@@ -21,11 +21,16 @@ dij:                                key(delete)
 
 boot:                    key(bksp)
 <number_small> boot:         key("bksp:{number_small}")
+
+
+jut:              key(space)
+<number_small> jut:     key("space:{number_small}")
+
 pop up:      key(apps)
 
 pinch: key(cmd-v)
 copy: key(cmd-c)
-cut:      key(cmd-x)
+cuty:      key(cmd-x)
 duplicate <number_small>:
     key(cmd-c)
     key("cmd-v:{number_small}")
