@@ -55,7 +55,7 @@ currency_symbols = [
 symbols = [
     Symbol("`", ["tick"]),
     Symbol(",", ["kooch"]),
-    Symbol(".", ["period","dot"]),
+    Symbol(".", ["period"]),
     Symbol("!", ["bang"]),
     Symbol("~", ["tilde"]),
     Symbol(";", ["semi"]),

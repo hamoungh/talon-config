@@ -23,8 +23,8 @@ boot:                    key(bksp)
 <number_small> boot:         key("bksp:{number_small}")
 
 
-jut:              key(space)
-<number_small> jut:     key("space:{number_small}")
+jet:              key(space)
+<number_small> jet:     key("space:{number_small}")
 
 pop up:      key(apps)
 

@@ -1,7 +1,3 @@
-I have configured the Talon voice recognition  configuration with my own custom grammar. Most of that is coded in the files within the code/keys directory.
+I have configured the Talon voice recognition  configuration with my own custom grammar. Most of that is coded in the files within the 'code/keys' directory.   
 
-An important part of the grammar is for example when I say for example "up five times" or "hyph twenty times" or "slap five times" in that case I want the same actio to be repeated. 
-I want to implement that kind of thing.*
-
-if that sort of functionality doesn't exist in the codebase let's take a look at https://github.com/talonhub/community/tree/main/core maybe there is something useful there or maybe you can search internet to figure out how the people deal with this sort of situation
-
+currently i have some customized commands for the Visual studio code editor.    basically what i want to do is to have a customized set of commands in a new file for cursor ide. or maybe if all the shortcuts are the same we can just reuse the same configuration. 
