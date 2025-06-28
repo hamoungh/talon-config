@@ -8,22 +8,12 @@
 <number_small> left (word | words):   key("alt-left:{number_small}")
 <number_small> right (word | words):  key("alt-right:{number_small}")
 
-home:        key(home)
-end:         key(end)
-
-slap:                               key(enter)
 <number_small> slap:           key("enter:{number_small}")
-tab:                                key(tab)
 <number_small> tab:            key("tab:{number_small}")
-dij:                                key(delete)
 <number_small> dij:            key("delete:{number_small}")
 
-
-boot:                    key(bksp)
 <number_small> boot:         key("bksp:{number_small}")
 
-
-jet:              key(space)
 <number_small> jet:     key("space:{number_small}")
 
 pop up:      key(apps)
