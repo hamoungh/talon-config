@@ -16,9 +16,9 @@ not speech.engine: dragon
 #
 # It's a useful and well known command, though, so if you're using any other speech
 # engine, this controls Talon.
-^esnore [<phrase>]$: speech.disable()
+^(esnore|snore) [<phrase>]$: speech.disable()
 
-^esnore all [<phrase>]$:
+^(esnore|snore) all [<phrase>]$:
     user.switcher_hide_running()
     user.history_disable()
     user.homophones_hide()
