@@ -175,3 +175,96 @@ Notice that **"shi boot"** and **"boot"** are handled by the same set of generic
 The command **"five boot"** (`COMMAND 3`) is a highly specific, one-off rule. It's defined separately in `keystroke.talon` because its action (repeating the key) is unique and doesn't fit the generic pattern.
 
 The phrase **"boot five times"** would likely be handled by an entirely different system called the "repeater" (`plugin/repeater/repeater.talon`), which listens for phrases like "... five times" after another command. That's a story for another day, but it's a perfect example of how Talon separates different concerns into different files.
+
+
+--------------------
+That is a fantastic question, and you've hit on the single most important part of mastering Talon: moving from a collection of individual commands to a cohesive, modular system. It's very common for configurations migrated from other systems to have these kinds of redundancies.
+
+Let's tackle this in the two parts you asked about.
+
+---
+
+### Part 1: Finding Opportunities for Cleaner, More Modular Rules
+
+Your intuition is correct. The goal is to separate *what a thing is* (vocabulary in `.talon-list` files) from *what it does* (actions in `.py` files) and *how you say it* (grammar in `.talon` files).
+
+I'll start by re-examining `core/keys/keystroke.talon`, as it's a great example of a file that often contains legacy, hardcoded commands.
+
+
+Read file: core/keys/keystroke.talon
+Okay, `keystroke.talon` is the perfect place to start. I see several clear opportunities for improvement.
+
+#### The Redundancy: Hardcoded Keybindings
+
+Look at these lines:
+
+```talon
+pinch: key(cmd-v)
+copy: key(cmd-c)
+cuty:      key(cmd-x)
+select all:  key(cmd-a)
+undo: key(cmd-z)
+```
+
+These are classic examples of hardcoding. Right now, the voice command `copy` is rigidly tied to the keypress `cmd-c`.
+
+**What's wrong with this?**
+1.  **Not Reusable:** If you want to create a more complex command, like "copy this line," you can't easily reuse the concept of "copy." You'd have to hardcode `key(cmd-c)` again.
+2.  **Not Portable:** These commands will only work on a Mac. If you were to use your configuration on Windows or Linux, you would have to go find every single instance of `key(cmd-c)` and change it to `key(ctrl-c)`.
+3.  **Not Modular:** It mixes the "what you say" (`copy`) with the "what it does" (`key(cmd-c)`).
+
+#### The Solution: Use Actions
+
+The standard Talon philosophy is to abstract these into **actions**. An action is a function you define in a `.py` file that can be called from any `.talon` file.
+
+Here's how we can refactor this:
+
+1.  **Create a Python file for actions**, for example, `core/edit/actions.py`.
+2.  **Define generic actions** in that file, like `edit.copy()`, `edit.paste()`, etc. Talon already has these built-in, defined in `core/edit/edit.py`.
+3.  **Update the `.talon` file** to call these actions instead of hardcoding keys.
+
+For example, `copy: key(cmd-c)` would become `copy: edit.copy()`.
+
+The built-in `edit.copy()` action is smart. It knows to press `cmd-c` on Mac and `ctrl-c` on Windows. By using the action, you make your voice command more powerful and portable. The same principle applies to `undo`, `cut`, `paste`, `select_all`, etc.
+
+**I can help you perform this refactoring across your important files if you'd like.** It would involve creating new `.py` action files where needed and cleaning up the `.talon` files to call them.
+
+---
+
+### Part 2: Improving Recognition Quality
+
+This is a fantastic and subtle topic. You are correct that you want the engine to be better at recognizing your frequent commands, like the alphabet. However, Talon doesn't use a concept of "priority" or "weight" in its grammar. You can't tell it "there's a 90% chance I'm saying a letter."
+
+Instead, Talon's accuracy comes from **aggressively reducing the number of possible things it's listening for at any given moment.** It achieves this primarily through two mechanisms:
+
+#### 1. Context
+
+This is the most powerful tool. A command is only active if its context matches the current situation. Your alphabet commands are likely defined in a file with a header like this:
+
+```talon
+tag: user.letter
+-
+... your alphabet commands
+```
+
+This grammar is only active when the `user.letter` tag is enabled. This is much more efficient than a global grammar because the speech engine can completely ignore these commands when you're not in "letter mode." You can apply contexts for the OS (`os: mac`), the current application (`app.bundle: com.google.Chrome`), or custom tags.
+
+**The more specific your contexts, the smaller the search space for the engine, and the higher the accuracy.**
+
+#### 2. Vocabulary and Spoken Forms
+
+This is the most direct way you can help the engine. By defining a word in a `.talon-list`, you are explicitly telling the speech recognition engine: "This is a word I say. It is part of my active vocabulary. Listen for it."
+
+Let's look at your alphabet file to make this concrete.
+
+
+Read file: core/keys/letter.talon-list
+This is a perfect example. Because you have explicitly defined `ach: a`, `bik: b`, etc., you have given the recognition engine a huge advantage. When it processes audio, it knows to check for these specific, unique sounds. This is far more effective than if it were trying to guess from a generic English dictionary.
+
+**Practical steps you can take to improve recognition:**
+
+1.  **Use Homophones:** This is Talon's secret weapon. If you find that you say "noon" (for 'n') but Talon often hears "known," you can create a `homophones.csv` file and add the line: `known,noon`. This tells Talon, "If you think you heard 'known,' you probably actually heard 'noon.' Please make that substitution before you try to match the grammar." This cleans up errors before they even happen.
+2.  **Create Custom Lists for Jargon:** If you work with specific library or variable names frequently (e.g., "pandas," "useEffect," "my_custom_variable"), create a new `.talon-list` for them and add them to captures. This trains the engine on your specific work vocabulary.
+3.  **Review Command History:** Say `command history` and watch what Talon thinks you're saying. If you see consistent errors (e.g., it always mishears one word as another), that's a perfect candidate for a homophone entry.
+
+In summary: **clean, modular rules** make your configuration easier to manage and more powerful, while **specific contexts and a well-defined vocabulary (with homophones)** are the keys to high-accuracy recognition.
