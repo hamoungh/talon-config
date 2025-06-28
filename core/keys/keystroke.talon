@@ -18,15 +18,13 @@
 
 pop up:      key(apps)
 
-pinch: key(cmd-v)
-copy: key(cmd-c)
-cuty:      key(cmd-x)
+pinch: edit.paste()
+copy: edit.copy()
+cuty: edit.cut()
 duplicate <number_small>:
-    key(cmd-c)
+    edit.copy()
     key("cmd-v:{number_small}")
-select all:  key(cmd-a)
-
-
+select all:  edit.select_all()
 
 inteli jey:  insert("intellij")
-undo: key(cmd-z) 
+undo: edit.undo() 
