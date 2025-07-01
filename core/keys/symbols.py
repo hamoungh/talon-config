@@ -20,7 +20,7 @@ symbols_for_create_spoken_forms = {
     "and": "&",
     # for emails
     "at": "@",
-    # "dot": ".",
+    "dot": ".",
     # for application names like "notepad++"
     "plus": "+",
 }
