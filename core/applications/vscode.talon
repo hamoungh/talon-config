@@ -1,4 +1,4 @@
-app: /Visual Studio Code/
+app: vscode
 -
 
 always on top:             key(cmd-t)

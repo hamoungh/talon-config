@@ -74,3 +74,18 @@ and app.exe: /^powershell\.exe$/i
 apps.vim = """
 win.title:/VIM/
 """
+
+apps.cursor = """
+os: mac
+and app.name: Cursor
+"""
+
+apps.vscode = """
+os: mac
+and app.name: Visual Studio Code
+"""
+
+apps.intellij = """
+os: mac
+and app.name: IntelliJ IDEA
+"""

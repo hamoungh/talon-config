@@ -1,4 +1,4 @@
-app: /IntelliJ IDEA/
+app: intellij
 -
 
 # ---- navigation & tool windows ----

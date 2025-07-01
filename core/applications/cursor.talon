@@ -1,4 +1,4 @@
-app: /Cursor/
+app: cursor
 -
 
 always on top:             key(cmd-t)
