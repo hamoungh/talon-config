@@ -75,17 +75,49 @@ apps.vim = """
 win.title:/VIM/
 """
 
-apps.cursor = """
+
+# DataGrip (JetBrains)
+apps.datagrip = r"""
 os: mac
-and app.name: Cursor
+and app.bundle: com.jetbrains.datagrip
+os: mac
+and app.name: DataGrip
 """
 
-apps.vscode = """
+# IntelliJ IDEA (Ultimate + Community)
+apps.intellij = r"""
+os: mac
+and app.bundle: com.jetbrains.intellij
+os: mac
+and app.bundle: com.jetbrains.intellij.ce
+# Optional name fallback (covers Community’s "CE" suffix)
+os: mac
+and app.name: /^IntelliJ IDEA( CE)?$/
+"""
+
+# RStudio
+apps.rstudio = r"""
+os: mac
+and app.bundle: org.rstudio.RStudio
+os: mac
+and app.name: RStudio
+"""
+
+# VS Code (fixed from your original)
+apps.vscode = r"""
+os: mac
+and app.bundle: com.microsoft.VSCode
+os: mac
+and app.bundle: com.microsoft.VSCodeInsiders
+# Optional name fallbacks
+os: mac
+and app.name: Code
 os: mac
 and app.name: Visual Studio Code
 """
 
-apps.intellij = """
+# Cursor (keep name; bundle id can vary between builds)
+apps.cursor = r"""
 os: mac
-and app.name: IntelliJ IDEA
+and app.name: Cursor
 """

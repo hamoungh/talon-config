@@ -21,34 +21,30 @@ zi go in:
     key(cmd-v)
     insert(" && ls")
     key(enter)
-
 zi go to:                  key(cmd-g)
 zi go up:
     insert("cd .. && ls")
     key(enter)
-
 zi imports:                key(cmd-shift-o)
 zi list:
     insert("ls")
     key(enter)
-
 zi project:                key(cmd-b)
 zi replace:                key(cmd-h)
 zi replace everywhere:     key(cmd-shift-h)
 zi resize:                 key(cmd-backslash)
 zi run:
-    key(end)
-    key(shift-home)
+    key(cmd-l)
     key(cmd-c)
-    key(cmd-` )
+    key(ctrl-`)
+    sleep(150ms)
     key(cmd-v)
     key(enter)
-
 zi source control:         key(cmd-shift-g)
 zi structure:              key(cmd-shift-o)
 zi surround with:
     key(cmd-k)
     key(cmd-s)
-zi terminal:               key(cmd-` )
+zi terminal:               key(ctrl-`)
 zi type hierarchy:         key(cmd-t)
-zi usage:                  key(shift-f12) 
+zi usage:                  key(shift-f12)
