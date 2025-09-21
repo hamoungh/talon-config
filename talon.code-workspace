@@ -1,0 +1,18 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "gitlens.remotes": {
+            "upstream": {
+                "ignoreForComparison": true,
+                "ignoreForPullRequests": true
+            }
+        },
+        "gitlens.views.repositories.showRemotes": true,
+        "gitlens.views.repositories.files.layout": "tree",
+        "gitlens.defaultRemote": "origin"
+    }
+}

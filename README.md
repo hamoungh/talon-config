@@ -1,6 +1,11 @@
-# community
+# community (personalized)
 
 Voice command set for [Talon](https://talonvoice.com/), community-supported.
+
+Note: This copy is customized for a simplified, accuracy-focused grammar. For agent guidance and a summary of differences from upstream, see:
+
+- AGENT_GUIDE.md
+- docs/CHANGES_FROM_UPSTREAM.md
 
 _(Originally called `knausj_talon`, after [its original creator :superhero:](https://github.com/knausj85))_
 
