@@ -1,5 +1,9 @@
 list: user.letter
 -
+# for common alternative spoken forms for letters, visit
+# https://talon.wiki/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy#collected-alternatives-to-the-default-alphabet
+# original 
+# https://raw.githubusercontent.com/talonhub/community/refs/heads/main/core/keys/letter.talon-list
 air: a
 bat: b
 cage: c
@@ -9,15 +13,15 @@ fitch: f
 guff: g
 harp: h
 ice: i
-jack: j
+jury: j
 kif: k
 lum: l
 mim: m
-noon: n
-odd: o
+near: n
+oink: o
 puff: p
 cu: q
-ridge: r
+red: r
 sought: s
 tinge: t
 urge: u
@@ -25,4 +29,4 @@ vas: v
 wick: w
 ex: x
 vice: y
-zed: z
+zip: z
