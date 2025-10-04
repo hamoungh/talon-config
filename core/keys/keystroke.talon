@@ -18,13 +18,19 @@
 
 pop up:      key(apps)
 
-pinch: edit.paste()
-copy: edit.copy()
-cuty: edit.cut()
+(pace | paste) (that | it): edit.paste()
+
+copy that: edit.copy()
+cut that: edit.cut()
 duplicate <number_small>:
     edit.copy()
     key("cmd-v:{number_small}")
 select all:  edit.select_all()
 
 inteli jey:  insert("intellij")
-undo: edit.undo() 
+undo that: edit.undo()
+redo that: edit.redo()
+
+# Save
+file save: edit.save()
+file save all: edit.save_all()

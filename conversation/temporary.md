@@ -1,15 +1,12 @@
-i'm currently using talon voice recognition engine with conformer D2 model.
-i'm currently happy with the quality of detecting sentences .
-but when it comes to detecting the commands or individual words there is a problem.
-especially i have defined all the alphabets as new commands and the commands that i use are not common english words.
-for example i have configured the command 'jack' to type the alphabet   'j'. 
-that was the common approach when i  used the dragon professional individual and the dragonfly library.
-and i think that this is the common approach when using talon.
-the reason behind it is that when people use these voice resignation software for computer programming they usually run the voice resignation in the command mode. 
-but the problem that i currently have is that the accuracy of the commands especially the ones that are not rooted in english words is very low.
 
-especially when i dictate multiple characters using commands in the same sentence.
-i want you to read all the codebase and see if there is any modification that we can do to make the accuracy better.for now i don't want to implement any changes but i just want to get your ideas. give me all those ideas in a new markdown document in the conversation folder.
+Hello Aegis,
 
+So basically here are a few examples where I start by just using the commands for individual alphabets. In this case the performance is pretty fine except for a few alphabets. But as soon as I switch to multiple alphabets in the same phrase, the accuracy starts to drop. Basically two subsequent alphabets work correctly around fifty percent of the time, and three or more alphabets are rarely correct.
+
+The thing is, I'm really trying to switch from Windows to Mac and I have to get this to work, or at least get it to a level that I can start seriously using it.
+
+I'm currently on monthly beta membership. If you think you can give me better support, I can switch to the professional membership for at least three to six months since this is really really important for me. If you could help me optimize my grammar configuration and maybe even help me train or customize a model based on the words that I'm used to, that would be really great.
+
+I have used this alphabet and command set for the past ten years and I'm very used to them. I can make small adjustments but wouldn't be able to change the whole thing.
 
 
