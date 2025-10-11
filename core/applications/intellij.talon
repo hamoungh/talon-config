@@ -53,6 +53,12 @@ zi run:
     key(cmd-v)
     key(enter)
 
+zi chat:
+    key(cmd-c)
+    key(alt-f12)
+    key(cmd-v)
+    key(enter)
+
 zi command:                key(shift-cmd-p)
 zi imports:                key(cmd-alt-o)
 zi exe:                    key(shift-alt-e)

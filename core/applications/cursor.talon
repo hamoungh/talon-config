@@ -44,6 +44,12 @@ zi run:
     key(cmd-v)
     key(enter)
 
+zi chat:
+    key(cmd-c)
+    key(ctrl-`)
+    key(cmd-v)
+    key(enter)
+
 zi source control:         key(cmd-shift-g)
 zi structure:              key(cmd-shift-o)
 zi surround with:
