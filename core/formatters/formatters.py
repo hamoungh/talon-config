@@ -236,7 +236,7 @@ formatter_list = [
     CustomFormatter("SPACE_SURROUNDED_STRING", lambda text: f" {text} "),
     CustomFormatter("ALL_CAPS", lambda text: text.upper()),
     CustomFormatter("ALL_LOWERCASE", lambda text: text.lower()),
-    CustomFormatter("COMMA_SEPARATED", lambda text: re.sub(r"\s+", ", ", text)),
+
     CustomFormatter("REMOVE_FORMATTING", remove_code_formatting),
     TitleFormatter("CAPITALIZE_ALL_WORDS"),
     CustomFormatter("EACH_WORD_CAPITALIZE", capitalize_each_word),
