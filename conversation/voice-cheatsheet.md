@@ -46,6 +46,55 @@
 | home | `home` | end | `end` | page up | `pgup` |
 | page down | `pgdown` | insert | `insert` |  |  |
 
+#### Formatters
+
+**Code formatters** (e.g., `zake hello world` → `hello_world`)
+
+| Spoken | Output Format | Example |
+|---|---|---|
+| all cap | ALL_CAPS | `HELLO_WORLD` |
+| all down | all lowercase | `hello world` |
+| nace | privateCase | `helloWorld` |
+| dotted | dot.separated | `hello.world` |
+| list | comma,separated | `hello,world` |
+| dub string | "double quoted" | `"hello world"` |
+| dunder | __double_underscore__ | `__hello_world__` |
+| hammer | PublicCase | `HelloWorld` |
+| hake | dash-separated | `hello-world` |
+| packed | double::colon | `hello::world` |
+| padded | ` space surrounded ` | ` hello world ` |
+| slasher | all/slashes | `hello/world` |
+| conga | slash/separated | `hello/world` |
+| smash | nospaces | `helloworld` |
+| zake | snake_case | `hello_world` |
+| string | 'single quoted' | `'hello world'` |
+| zabe | SNAKE_CAPS | `HELLO_WORLD` |
+
+**Word formatters**
+
+| Spoken | Output Format | Example |
+|---|---|---|
+| word | no change | `hello world` |
+| trot | trailing space | `hello world ` |
+| proud | Capitalize first | `Hello world` |
+| leap | Capitalize + space | `Hello world ` |
+
+**Prose formatters**
+
+| Spoken | Output Format | Example |
+|---|---|---|
+| say / speak | no change | `hello world` |
+| sentence | Capitalize first | `Hello world` |
+| title | Title Case | `Hello World` |
+| jait | Each Word Cap | `Hello World` |
+
+**Reformatters**
+
+| Spoken | Action | Example |
+|---|---|---|
+| cap | CAPITALIZE | `HELLO WORLD` |
+| unformat | remove formatting | `hello world` |
+
 
 <sub>Tip: print with narrow margins and scale ~85–90% to fit one page.</sub>
 
