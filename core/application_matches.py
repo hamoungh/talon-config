@@ -86,13 +86,16 @@ and app.name: DataGrip
 
 # IntelliJ IDEA (Ultimate + Community)
 apps.intellij = r"""
+# macOS: prefer bundle prefix for reliability, with name fallbacks
 os: mac
-and app.bundle: com.jetbrains.intellij
+and app.bundle: /^com\.jetbrains\./
 os: mac
-and app.bundle: com.jetbrains.intellij.ce
-# Optional name fallback (covers Community’s "CE" suffix)
+and app.name: /^IntelliJ/
 os: mac
-and app.name: /^IntelliJ IDEA( CE)?$/
+and app.name: /^JetBrains/
+os: mac
+and app.name: /^Gateway/
+
 """
 
 # RStudio
