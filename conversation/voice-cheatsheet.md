@@ -95,6 +95,19 @@
 | cap | CAPITALIZE | `HELLO WORLD` |
 | unformat | remove formatting | `hello world` |
 
+#### Window and Application Management
+
+| Spoken | Action | Spoken | Action |
+|---|---|---|---|
+| focus `<app name>` | Focus application | focus last | Switch to last app |
+| running list | Show running apps | launch `<app name>` | Launch application |
+| window new | Open new window | window next | Switch to next window |
+| window last | Previous window | window close | Close current window |
+| window hide | Hide current window | app preferences | Open app settings |
+| snap left/right/top/bottom | Snap window to position | snap `<app>` left/right | Focus app and snap |
+| snap next screen | Move to next screen | snap screen `<number>` | Move to specific screen |
+| mission | Mission Control (ctrl+up) |  |  |
+
 
 <sub>Tip: print with narrow margins and scale ~85–90% to fit one page.</sub>
 
