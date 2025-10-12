@@ -45,7 +45,7 @@ zi find process:
 
 # ---- misc ----
 zi comment:                key(cmd-/)
-zi run:
+zi launch:
     key(home)
     key(shift-end)
     key(cmd-c)

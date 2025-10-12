@@ -33,7 +33,7 @@ zi project:                key(cmd-b)
 zi replace:                key(cmd-h)
 zi replace everywhere:     key(cmd-shift-h)
 zi resize:                 key(cmd-backslash)
-zi run:
+zi launch:
     key(cmd-l)
     key(cmd-c)
     key(ctrl-`)
