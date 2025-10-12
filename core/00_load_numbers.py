@@ -8,4 +8,4 @@ existing implementation so the captures and lists are registered early.
 from importlib import import_module
 
 # Importing the numbers module registers the required lists/captures.
-import_module("user.core.numbers.numbers") 
+# import_module("user.talonconfig.core.numbers.numbers") 
