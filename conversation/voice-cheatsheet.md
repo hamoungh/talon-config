@@ -4,7 +4,7 @@
 
 | Spoken | Output | Spoken | Output | Spoken | Output |
 |--------|---|--------|---|---|---|
-| air    | `a` | bat    | `b` | cage | `c` |
+| arch   | `a` | bat    | `b` | cage | `c` |
 | drum   | `d` | ish    | `e` | fitch | `f` |
 | gust   | `g` | harp   | `h` | ice | `i` |
 | jury   | `j` | crunch | `k` | look | `l` |
@@ -108,6 +108,25 @@
 | snap next screen | Move to next screen | snap screen `<number>` | Move to specific screen |
 | mission | Mission Control (ctrl+up) |  |  |
 
+
+#### Zi Commands (IDE shortcuts)
+
+| Spoken | Action | Spoken                | Action |
+|---|---|-----------------------|---|
+| zi launch | Select current line | zi find / zi search   | Find in file |
+| zi file | Open file | zi find everywhere    | Find in all files |
+| zi command | Command palette | zi replace            | Replace in file |
+| zi comment | Toggle comment | zi replace everywhere | Replace in all files |
+| zi format | Format code | zi fixi               | Quick fix |
+| zi imports | Organize imports | zi go to              | Go to definition |
+| zi usage | Find usages | zi type hierarchy     | Show type hierarchy |
+| zi callgraph | Show call hierarchy | zi surround with      | Surround with template |
+| zi terminal | Open terminal | zi project            | Show project view |
+| zi structure | Show file structure | zi source control     | Show source control |
+| zi resize | Resize panels | zi launch            | Execute/run |
+| zi fold all | Fold all code blocks | zi chat               | Open AI chat |
+| zi list | Show recent files | zi find process       | Find running process |
+| zi go in | Navigate into | zi go up              | Navigate up |
 
 <sub>Tip: print with narrow margins and scale ~85–90% to fit one page.</sub>
 

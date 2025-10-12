@@ -22,6 +22,7 @@ pop up:      key(apps)
 
 copy that: edit.copy()
 cut that: edit.cut()
+that's it: key(ctrl-c)
 duplicate <number_small>:
     edit.copy()
     key("cmd-v:{number_small}")
