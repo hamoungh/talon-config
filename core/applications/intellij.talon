@@ -49,13 +49,17 @@ zi launch:
     key(home)
     key(shift-end)
     key(cmd-c)
+    sleep(100ms)
     key(alt-f12)
+    sleep(50ms)
     key(cmd-v)
     key(enter)
 
 zi chat:
     key(cmd-c)
+    sleep(100ms)
     key(alt-f12)
+    sleep(50ms)
     key(cmd-v)
     key(enter)
 

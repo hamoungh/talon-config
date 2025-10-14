@@ -36,6 +36,7 @@ zi resize:                 key(cmd-backslash)
 zi launch:
     key(cmd-l)
     key(cmd-c)
+    sleep(100ms)
     key(ctrl-`)
     sleep(150ms)
     key(cmd-v)
@@ -43,6 +44,7 @@ zi launch:
 
 zi chat:
     key(cmd-c)
+    sleep(100ms)
     key(ctrl-`)
     sleep(150ms)
     key(cmd-v)

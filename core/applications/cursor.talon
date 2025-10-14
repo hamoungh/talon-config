@@ -40,13 +40,17 @@ zi launch:
     key(cmd-right)
     key(shift-cmd-left)
     key(cmd-c)
+    sleep(100ms)
     key(ctrl-`)
+    sleep(50ms)
     key(cmd-v)
     key(enter)
 
 zi chat:
     key(cmd-c)
+    sleep(100ms)
     key(ctrl-`)
+    sleep(50ms)
     key(cmd-v)
     key(enter)
 
