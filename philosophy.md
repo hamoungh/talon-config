@@ -1,7 +1,7 @@
-question: 
-i'm pretty confused about what happened here i want to know So what is the philosophy of different types of files in talon.  Here for example we split the definition of  "boot" into two files one is keystroke.talon and the other part is in special_key.talon-list . what is the meaning of these two different files and why we put the  following into two different files:
-<number_small> boot:         key("bksp:{number_small}")
-boot: backspace
+question:
+i'm pretty confused about what happened here i want to know So what is the philosophy of different types of files in talon.  Here for example we split the definition of  "wipe" into two files one is keystroke.talon and the other part is in special_key.talon-list . what is the meaning of these two different files and why we put the  following into two different files:
+<number_small> wipe:         key("bksp:{number_small}")
+wipe: backspace
 
 
 ----------
@@ -24,15 +24,15 @@ In the file I created, `core/keys/special_key.talon-list`, we have lines like th
 ```
 list: user.special_key
 -
-boot: backspace
+wipe: backspace
 end: end
 home: home
 ```
 
 *   `list: user.special_key` declares that we are adding words to a list named `user.special_key`.
-*   `boot: backspace` means: "In this list, the spoken word **'boot'** corresponds to the string value **'backspace'**."
+*   `wipe: backspace` means: "In this list, the spoken word **'wipe'** corresponds to the string value **'backspace'**."
 
-By itself, this does nothing. You couldn't just say "boot" and have it work yet. We've simply taught Talon a new word and its meaning, just like adding an entry to a dictionary.
+By itself, this does nothing. You couldn't just say "wipe" and have it work yet. We've simply taught Talon a new word and its meaning, just like adding an entry to a dictionary.
 
 ---
 
@@ -48,26 +48,26 @@ This is where "captures" like `<user.special_key>` come in. In `core/keys/keys.t
 
 Let's translate this grammar rule:
 *   `<user.special_key>`: "Listen for any word defined in the `user.special_key` list."
-*   `: key(special_key)`: "When you hear a valid word from that list, execute the `key()` action. The value you pass to the action is the value from the list file (e.g., 'backspace' for 'boot')."
+*   `: key(special_key)`: "When you hear a valid word from that list, execute the `key()` action. The value you pass to the action is the value from the list file (e.g., 'backspace' for 'wipe')."
 
-So, by adding `boot: backspace` to the list, this single grammar rule now automatically knows how to handle it:
-1.  You say "boot".
-2.  Talon sees that "boot" is in the `user.special_key` list.
+So, by adding `wipe: backspace` to the list, this single grammar rule now automatically knows how to handle it:
+1.  You say "wipe".
+2.  Talon sees that "wipe" is in the `user.special_key` list.
 3.  The `<user.special_key>` rule is matched.
 4.  Talon executes `key('backspace')`.
 
 ---
 
-### Answering Your Specific Question about "boot"
+### Answering Your Specific Question about "wipe"
 
 Now let's look at the two lines you asked about and why they live in different files:
 
-1.  `boot: backspace` (in `core/keys/special_key.talon-list`)
-    *   **Purpose:** This teaches Talon the *word* "boot" and adds it to the `special_key` vocabulary.
-    *   **Why it's here:** By making "boot" a "special key," we can now use it in *any* generic grammar rule that accepts a special key. This is how the "shi end" problem was solved. The rule `<user.modifiers> <user.unmodified_key>` can now accept "boot", allowing you to say "shi boot" for Shift+Backspace without writing a new, specific command for it.
+1.  `wipe: backspace` (in `core/keys/special_key.talon-list`)
+    *   **Purpose:** This teaches Talon the *word* "wipe" and adds it to the `special_key` vocabulary.
+    *   **Why it's here:** By making "wipe" a "special key," we can now use it in *any* generic grammar rule that accepts a special key. This is how the "shi end" problem was solved. The rule `<user.modifiers> <user.unmodified_key>` can now accept "wipe", allowing you to say "shi wipe" for Shift+Backspace without writing a new, specific command for it.
 
-2.  `<number_small> boot: key("bksp:{number_small}")` (in `core/keys/keystroke.talon`)
-    *   **Purpose:** This defines a *specific, more complex voice command*. It's not just "boot," it's the pattern of "(a number) followed by boot".
+2.  `<number_small> wipe: key("bksp:{number_small}")` (in `core/keys/keystroke.talon`)
+    *   **Purpose:** This defines a *specific, more complex voice command*. It's not just "wipe," it's the pattern of "(a number) followed by wipe".
     *   **Why it's here:** This is a grammar rule, not a vocabulary definition. It creates a voice command that has a different, more complex action than just pressing the key once. It tells Talon to press the backspace key multiple times.
 
 ### The Philosophy in a Nutshell
@@ -78,7 +78,7 @@ The philosophy is **Modularity and Reusability**.
 
 *   **After:** By defining "end" in a `.talon-list`, we make it a reusable building block. The single, generic rule `<user.modifiers> <user.unmodified_key>` can now automatically create dozens of command combinations for you.
 
-This separation makes your configuration much cleaner and easier to manage. If you ever decide you want to say "delete" instead of "boot" for backspace, you only have to change it in one place (the `.talon-list` file), and all the complex grammar rules (`<number_small> boot`, `shi boot`, etc.) will automatically start working with the new word.
+This separation makes your configuration much cleaner and easier to manage. If you ever decide you want to say "delete" instead of "wipe" for backspace, you only have to change it in one place (the `.talon-list` file), and all the complex grammar rules (`<number_small> wipe`, `shi wipe`, etc.) will automatically start working with the new word.
 
 Excellent questions. This gets to the very heart of Talon's design.
 
@@ -86,7 +86,7 @@ Excellent questions. This gets to the very heart of Talon's design.
 
 It's a powerful middle ground. A capture is a reusable **grammatical component**.
 
-*   A **`.talon-list`** is just a *list of words* (the ingredients). It has no grammar. `boot`, `end`, `home`.
+*   A **`.talon-list`** is just a *list of words* (the ingredients). It has no grammar. `wipe`, `end`, `home`.
 *   A **`.talon` command** is a *complete, actionable instruction* (the finished recipe). It defines a full voice command and what action to perform. `go to bed: system.sleep()`.
 *   A **`capture`** is a *named pattern* that you can reuse in multiple recipes (a sub-assembly like "cake batter"). It describes a piece of grammar, like "any key that isn't a modifier" or "any number from 1 to 99". It isn't a command by itself, but it's used to build commands.
 
@@ -103,10 +103,10 @@ Here is a simplified grammar that shows how your commands are constructed and wh
 These are the raw strings that come from `.talon-list` files.
 
 ```grammar
-// Defines the word "boot" and maps it to the value "backspace"
-SPOKEN_WORD_BOOT ::= "boot"
+// Defines the word "wipe" and maps it to the value "backspace"
+SPOKEN_WORD_wipe ::= "wipe"
   // FROM: core/keys/special_key.talon-list
-  // RULE: boot: backspace
+  // RULE: wipe: backspace
 
 // Defines the word "shi" and maps it to the value "shift"
 SPOKEN_WORD_SHI ::= "shi"
@@ -124,7 +124,7 @@ These rules, mostly from `.py` files, give grammatical meaning to the vocabulary
 
 ```grammar
 // A <special_key> is any word from the user.special_key list
-special_key ::= SPOKEN_WORD_BOOT
+special_key ::= SPOKEN_WORD_wipe
   // FROM: core/keys/keys.py
   // RULE: @mod.capture(rule="{self.special_key}")
 
@@ -149,32 +149,32 @@ unmodified_key ::= letter | number_key | ... | special_key
 These rules, from `.talon` files, combine the captures into complete, actionable voice commands.
 
 ```grammar
-// COMMAND 1: A simple, unmodified key press. This is how "boot" works.
+// COMMAND 1: A simple, unmodified key press. This is how "wipe" works.
 COMMAND ::= unmodified_key
   // ACTION: key(unmodified_key's value) -> key("backspace")
   // FROM: core/keys/keys.talon
   // RULE: <user.special_key>: key(special_key)
 
-// COMMAND 2: A modifier followed by an unmodified key. This is how "shi boot" works.
+// COMMAND 2: A modifier followed by an unmodified key. This is how "shi wipe" works.
 COMMAND ::= modifier unmodified_key
   // ACTION: key("{modifier}-{unmodified_key}") -> key("shift-backspace")
   // FROM: core/keys/keys.talon
   // RULE: <user.modifiers> <user.unmodified_key>: key("{modifiers}-{unmodified_key}")
 
-// COMMAND 3: A special, more complex command. This is how "five boot" works.
-COMMAND ::= number_small SPOKEN_WORD_BOOT
+// COMMAND 3: A special, more complex command. This is how "five wipe" works.
+COMMAND ::= number_small SPOKEN_WORD_wipe
   // ACTION: key("bksp:{number_small}") -> key("bksp:5")
   // FROM: core/keys/keystroke.talon
-  // RULE: <number_small> boot: key("bksp:{number_small}")
+  // RULE: <number_small> wipe: key("bksp:{number_small}")
 ```
 
 ### Why This is Important
 
-Notice that **"shi boot"** and **"boot"** are handled by the same set of generic, reusable rules (`COMMAND 1` and `COMMAND 2`). This is the flexible, preferred way.
+Notice that **"shi wipe"** and **"wipe"** are handled by the same set of generic, reusable rules (`COMMAND 1` and `COMMAND 2`). This is the flexible, preferred way.
 
-The command **"five boot"** (`COMMAND 3`) is a highly specific, one-off rule. It's defined separately in `keystroke.talon` because its action (repeating the key) is unique and doesn't fit the generic pattern.
+The command **"five wipe"** (`COMMAND 3`) is a highly specific, one-off rule. It's defined separately in `keystroke.talon` because its action (repeating the key) is unique and doesn't fit the generic pattern.
 
-The phrase **"boot five times"** would likely be handled by an entirely different system called the "repeater" (`plugin/repeater/repeater.talon`), which listens for phrases like "... five times" after another command. That's a story for another day, but it's a perfect example of how Talon separates different concerns into different files.
+The phrase **"wipe five times"** would likely be handled by an entirely different system called the "repeater" (`plugin/repeater/repeater.talon`), which listens for phrases like "... five times" after another command. That's a story for another day, but it's a perfect example of how Talon separates different concerns into different files.
 
 
 --------------------

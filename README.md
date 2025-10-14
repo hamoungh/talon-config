@@ -3,7 +3,7 @@
 Voice command set for [Talon](https://talonvoice.com/), customized for simplified, accuracy-focused grammar.
 
 For agent guidance and summary of differences from upstream, see:
-- AGENT_GUIDE.md  
+- AGENT_GUIDE.md
 - docs/CHANGES_FROM_UPSTREAM.md
 
 ## AI Agent Working Notes
@@ -32,7 +32,7 @@ Say `help alphabet` to display the alphabet.
 ### Keys and Symbols
 - Key commands: [keys.talon](core/keys/keys.talon)
 - Symbols: [symbols.py](core/keys/symbols.py) - simplified short forms (tick, bang, lace, race)
-- Special keys: [special_key.talon-list](core/keys/special_key.talon-list) (boot=backspace, jet=space, etc.)
+- Special keys: [special_key.talon-list](core/keys/special_key.talon-list)
 - Modifiers: [modifier_key.talon-list](core/keys/modifier_key.talon-list) (shi=shift, etc.)
 
 ### Formatters

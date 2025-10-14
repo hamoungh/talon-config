@@ -14,4 +14,4 @@ space: space
 tab: tab
 insert: insert
 delete: delete
-boot: backspace
+wipe: backspace

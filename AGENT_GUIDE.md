@@ -14,7 +14,7 @@ This repository is a personalized Talon user configuration focused on accuracy a
 - Alphabet: `core/keys/letter.talon-list` uses a non-standard phonetic set (e.g., "ach"→a, "bik"→b). Do not replace with upstream alphabet.
 - Symbols: `core/keys/symbols.py` defines concise spoken forms (e.g., "tick", "bang", "lace"). Maintain these mappings and extend via the same structure.
 - Special keys and modifiers: Moved to `.talon-list` (`special_key.talon-list`, `modifier_key.talon-list`) to enable generic captures in `keys.py` and flexible combos like `<user.modifiers> <user.unmodified_key>`.
-- Keystroke utilities: `core/keys/keystroke.talon` contains repeated-arrow/word and repeatable keypress patterns (e.g., `<number_small> boot: key("bksp:{number_small}")`). Prefer these over one-off hardcoded rules.
+- Keystroke utilities: `core/keys/keystroke.talon` contains repeated-arrow/word and repeatable keypress patterns (e.g., `<number_small> wipe: key("bksp:{number_small}")`). Prefer these over one-off hardcoded rules.
 - Mixed mode: `core/modes/command_and_dictation_mode.talon` includes a `mixed mode` command that enables command+dictation together.
 - Sleep/wake: Custom wake phrase `welcome back` in `core/modes/sleep_mode.talon`. Sleep is mapped to concise forms like `snore` in `modes_not_dragon.talon`.
 

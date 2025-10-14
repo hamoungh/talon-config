@@ -39,12 +39,12 @@
 
 #### Special keys (macOS)
 
-| Spoken | Output | Spoken | Output | Spoken | Output |
-|---|---|---|---|---|---|
-| slap | `enter` | backspace / boot | `backspace` | delete / dij | `delete` |
-| escape | `escape` | tab | `tab` | space | `space` |
-| home | `home` | end | `end` | page up | `pgup` |
-| page down | `pgdown` | insert | `insert` |  |  |
+| Spoken | Output | Spoken           | Output | Spoken | Output |
+|---|---|------------------|---|---|---|
+| slap | `enter` | backspace / wipe | `backspace` | delete  | `delete` |
+| escape | `escape` | tab              | `tab` | space | `space` |
+| home | `home` | end              | `end` | page up | `pgup` |
+| page down | `pgdown` | insert           | `insert` |  |  |
 
 #### Formatters
 

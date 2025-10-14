@@ -12,7 +12,7 @@
 <number_small> tab:            key("tab:{number_small}")
 <number_small> delete:         key("delete:{number_small}")
 
-<number_small> boot:         key("bksp:{number_small}")
+<number_small> wipe:         key("bksp:{number_small}")
 
 <number_small> jet:     key("space:{number_small}")
 
