@@ -15,4 +15,3 @@ tab: tab
 insert: insert
 delete: delete
 boot: backspace
-dij: delete

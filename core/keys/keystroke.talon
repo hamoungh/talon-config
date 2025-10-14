@@ -10,7 +10,7 @@
 
 <number_small> slap:           key("enter:{number_small}")
 <number_small> tab:            key("tab:{number_small}")
-<number_small> dij:            key("delete:{number_small}")
+<number_small> delete:         key("delete:{number_small}")
 
 <number_small> boot:         key("bksp:{number_small}")
 
