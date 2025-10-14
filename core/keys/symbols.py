@@ -82,9 +82,9 @@ symbols = [
     Symbol("<", None, ["angle", "L Angle", "left angle", "less than"]),
     Symbol(">", None, ["rangle", "R angle", "right angle", "greater than"]),
     Symbol("^", None, ["caret"]),
-    Symbol("|", None, ["pipe"]),
-    Symbol("'", None, ["quote", "apostrophe"]),
-    Symbol('"', None, ["dub quote", "double quote"]),
+    Symbol("|", None, ["pipe sign"]),
+    Symbol("'", None, ["apostrophe"]),
+    Symbol('"', None, ["double quote"]),
 ]
 
 # by convention, symbols should include currency symbols
