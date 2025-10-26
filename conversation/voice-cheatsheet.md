@@ -5,7 +5,7 @@
 | Spoken | Output | Spoken | Output | Spoken | Output |
 |--------|---|--------|---|---|---|
 | arch   | `a` | bat    | `b` | cage | `c` |
-| drum   | `d` | ish    | `e` | fitch | `f` |
+| drum   | `d` | each    | `e` | fine | `f` |
 | gust   | `g` | harp   | `h` | ice | `i` |
 | jury   | `j` | crunch | `k` | look | `l` |
 | mim    | `m` | near   | `n` | orange | `o` |
@@ -41,7 +41,8 @@
 
 | Spoken | Output | Spoken           | Output | Spoken | Output |
 |---|---|------------------|---|---|---|
-| slap | `enter` | backspace / wipe | `backspace` | delete  | `delete` |
+| slap | `enter` | return | `return` | enter | `keypad_enter` |
+| backspace / wipe | `backspace` | delete  | `delete` |  |  |
 | escape | `escape` | tab              | `tab` | space | `space` |
 | home | `home` | end              | `end` | page up | `pgup` |
 | page down | `pgdown` | insert           | `insert` |  |  |

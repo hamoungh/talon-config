@@ -6,6 +6,8 @@ end: end
 home: home
 minus: minus
 slap: enter
+return: return
+enter: keypad_enter
 backspace: backspace
 page down: pgdown
 page up: pgup
