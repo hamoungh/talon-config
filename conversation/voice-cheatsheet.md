@@ -23,7 +23,7 @@
 | exclamation mark / exclamation point / bang | `!` | asterisk / star | `*` | hash sign / number sign / hash | `#` |
 | percent sign / percent | `%` | at symbol / at sign | `@` | ampersand / and sign / amper | `&` |
 | hyphen / minus / dash | `-` | equals | `=` | plus | `+` |
-| tilde | `~` | underscore / down score | `_` | left paren / L paren / paren | `(` |
+| tilde | `~` | underscore / down score | `_` | left paren / L paren | `(` |
 | right paren / R paren | `)` | left bracket / L bracket / bracket / brack / left square / square | `[` | right bracket / R bracket / right square | `]` |
 | forward slash / slash | `/` | backslash | `\` | left brace / L brace / left curly bracket / curly bracket | `{` |
 | right brace / R brace / right curly bracket | `}` | left angle / L Angle / less than | `<` | right angle / R angle / greater than / rangle | `>` |
