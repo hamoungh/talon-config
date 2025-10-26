@@ -10,7 +10,7 @@
 | jury   | `j` | crunch | `k` | look | `l` |
 | mim    | `m` | near   | `n` | orange | `o` |
 | pink   | `p` | quench | `q` | red | `r` |
-| sought | `s` | trap   | `t` | urge | `u` |
+| sun | `s` | trap   | `t` | urge | `u` |
 | vest   | `v` | wick   | `w` | ex | `x` |
 | yank   | `y` | zip    | `z` |  |  |
 
