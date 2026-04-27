@@ -11,7 +11,7 @@
 | mim    | `m` | near   | `n` | orange | `o` |
 | pink   | `p` | quench | `q` | red | `r` |
 | sun | `s` | trap   | `t` | urge | `u` |
-| vest   | `v` | wick   | `w` | ex | `x` |
+| vest   | `v` | wick   | `w` | plex | `x` |
 | yank   | `y` | zip    | `z` |  |  |
 
 #### Symbols and punctuation
