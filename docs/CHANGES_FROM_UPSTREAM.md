@@ -4,11 +4,13 @@ This fork is streamlined for personal grammar and accuracy. Highlights below are
 
 ### Keys and symbols
 
-- Alphabet (`core/keys/letter.talon-list`): Replaced upstream default with a custom set: ach, bik, kaj, …, zed. Do not revert.
+- Alphabet (`core/keys/letter.talon-list`): Replaced upstream default with a custom set: arch, bat, cage, drum, each, fine, gust, harp, ice, jury, crunch, look, mim, near, orange, pink, quench, red, sun, trap, urge, vest, wick, plex, yank, zip. Do not revert.
 - Symbols (`core/keys/symbols.py`): Simplified, short spoken forms (e.g., tick, bang, lace, race) and trimmed currency to dollar only.
-- Special and modifier keys moved/defined in lists:
-  - `core/keys/special_key.talon-list` includes enter=slap, etc.
-  - `core/keys/modifier_key.talon-list` defines Mac-focused modifiers
+- Special and modifier keys split per-OS (matches upstream's `mac/` + `win/` subdirectory pattern):
+  - `core/keys/mac/special_key.talon-list` (`os: mac`) — preserves `slap: enter`, `delete: delete` (forward-delete), `wipe: backspace` user customizations.
+  - `core/keys/win/special_key.talon-list` (`os: windows` + `os: linux`) — same user grammar plus Windows-specific `menu key` and `print screen`.
+  - `core/keys/mac/modifier_key.talon-list` (`os: mac`) — matches upstream Mac (`super: cmd`, `command: cmd`, `function/globe: fn`).
+  - `core/keys/win/modifier_key.talon-list` (`os: windows` + `os: linux`) — matches upstream Win (`super: super`, `command: ctrl`, no fn).
 - `core/keys/keys.talon`: Added explicit passthrough rules for `<user.number_key>` and `<user.arrow_key>`.
 - `core/keys/keystroke.talon`: Local file providing numeric-repeat commands for arrows, words, and keys, plus mapped editing actions (`edit.copy()`, etc.).
 

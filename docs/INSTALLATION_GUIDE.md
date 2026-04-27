@@ -5,7 +5,7 @@ Voice command set for [Talon](https://talonvoice.com/), customized for simplifie
 **Note: This is a personalized fork with significant changes from upstream talonhub/community.**
 
 Key customizations:
-- Custom alphabet: ach, bik, kaj, ..., zed
+- Custom alphabet: arch, bat, cage, drum, ..., zip
 - Simplified symbols and key mappings
 - Custom sleep/wake commands (`snore`/`welcome back`)
 - Streamlined for accuracy and reduced vocabulary
@@ -56,7 +56,7 @@ Note that it is also possible to install `community` by [downloading and extract
 
 **Important: This personalized fork uses a custom alphabet and different commands than upstream.**
 
-- Custom alphabet: `ach`, `bik`, `kaj`, etc. (say `help alphabet` to see full list)
+- Custom alphabet: `arch`, `bat`, `cage`, etc. (say `help alphabet` to see full list)
 - Sleep command: `snore` (wake with `welcome back`)
 - Mixed mode available for command+dictation together
 
@@ -86,11 +86,11 @@ If you use vim, just start with the numbers and alphabet, otherwise look at gene
 
 **This fork uses a custom alphabet different from upstream:**
 
-The custom alphabet is defined in [letter.talon-list](../core/keys/letter.talon-list): ach, bik, kaj, dug, eek, foy, gul, hep, ice, jig, kul, lug, mig, nug, ork, pul, qua, rug, sun, tug, urk, vig, wug, xul, yak, zed.
+The custom alphabet is defined in [letter.talon-list](../core/keys/letter.talon-list): arch, bat, cage, drum, each, fine, gust, harp, ice, jury, crunch, look, mim, near, orange, pink, quench, red, sun, trap, urge, vest, wick, plex, yank, zip.
 
 Say `help alphabet` to open a window displaying the alphabet. `help close` closes the window.
 
-Try saying e.g. `ach bik kaj` to insert abc.
+Try saying e.g. `arch bat cage` to insert abc.
 
 ### Keys
 

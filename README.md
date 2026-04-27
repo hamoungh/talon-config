@@ -26,7 +26,7 @@ For agent guidance and summary of differences from upstream, see:
 ## Core Components
 
 ### Alphabet
-Custom alphabet defined in [letter.talon-list](core/keys/letter.talon-list): ach, bik, kaj, ..., zed.
+Custom alphabet defined in [letter.talon-list](core/keys/letter.talon-list): arch, bat, cage, drum, each, fine, gust, harp, ice, jury, crunch, look, mim, near, orange, pink, quench, red, sun, trap, urge, vest, wick, plex, yank, zip.
 Say `help alphabet` to display the alphabet.
 
 ### Keys and Symbols

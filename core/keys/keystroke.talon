@@ -25,7 +25,8 @@ cut that: edit.cut()
 that's it: key(ctrl-c)
 duplicate <number_small>:
     edit.copy()
-    key("cmd-v:{number_small}")
+    edit.paste()
+    repeat(number_small - 1)
 select all:  edit.select_all()
 
 inteli jey:  insert("intellij")

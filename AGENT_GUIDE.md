@@ -11,7 +11,7 @@ This repository is a personalized Talon user configuration focused on accuracy a
 
 ## Key conventions (customized)
 
-- Alphabet: `core/keys/letter.talon-list` uses a non-standard phonetic set (e.g., "ach"→a, "bik"→b). Do not replace with upstream alphabet.
+- Alphabet: `core/keys/letter.talon-list` uses a non-standard phonetic set (e.g., "arch"→a, "bat"→b). Do not replace with upstream alphabet.
 - Symbols: `core/keys/symbols.py` defines concise spoken forms (e.g., "tick", "bang", "lace"). Maintain these mappings and extend via the same structure.
 - Special keys and modifiers: Moved to `.talon-list` (`special_key.talon-list`, `modifier_key.talon-list`) to enable generic captures in `keys.py` and flexible combos like `<user.modifiers> <user.unmodified_key>`.
 - Keystroke utilities: `core/keys/keystroke.talon` contains repeated-arrow/word and repeatable keypress patterns (e.g., `<number_small> wipe: key("bksp:{number_small}")`). Prefer these over one-off hardcoded rules.
