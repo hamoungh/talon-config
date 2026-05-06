@@ -6,6 +6,7 @@ nmap
 admin
 Cisco
 Citrix
+string
 VPN
 DNS
 Minecraft
