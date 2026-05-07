@@ -72,6 +72,14 @@
 | string | 'single quoted' | `'hello world'` |
 | zabe | SNAKE_CAPS | `HELLO_WORLD` |
 
+**Prose formatters** — *greedy*
+
+| Spoken | Output Format | Example |
+|---|---|---|
+| say / speak | no change | `hello world` |
+| sentence | Capitalize first | `Hello world` |
+| title | Title Case | `Hello World` |
+
 **Word formatters** — *non-greedy, one word, chainable*
 
 | Spoken | Output Format | Example |
@@ -80,15 +88,6 @@
 | trot | trailing space | `hello world ` |
 | proud | Capitalize first | `Hello world` |
 | leap | Capitalize + space | `Hello world ` |
-
-**Prose formatters** — *greedy*
-
-| Spoken | Output Format | Example |
-|---|---|---|
-| say / speak | no change | `hello world` |
-| sentence | Capitalize first | `Hello world` |
-| title | Title Case | `Hello World` |
-| jait | Each Word Cap | `Hello World` |
 
 **Reformatters**
 
