@@ -49,7 +49,9 @@
 
 #### Formatters
 
-**Code formatters** (e.g., `zake hello world` → `hello_world`)
+> **Chaining:** only **word formatters** chain with a following command in the same utterance (e.g. `proud stack L paren` → `Stack(`). **Code** and **prose** formatters are greedy — they consume words until end of breath, or until `over`. To chain after them, terminate with `over` or pause first.
+
+**Code formatters** — *greedy* (e.g., `zake hello world` → `hello_world`)
 
 | Spoken | Output Format | Example |
 |---|---|---|
@@ -57,7 +59,6 @@
 | all down | all lowercase | `hello world` |
 | nace | privateCase | `helloWorld` |
 | dotted | dot.separated | `hello.world` |
-| list | comma,separated | `hello,world` |
 | dub string | "double quoted" | `"hello world"` |
 | dunder | __double_underscore__ | `__hello_world__` |
 | hammer | PublicCase | `HelloWorld` |
@@ -71,7 +72,7 @@
 | string | 'single quoted' | `'hello world'` |
 | zabe | SNAKE_CAPS | `HELLO_WORLD` |
 
-**Word formatters**
+**Word formatters** — *non-greedy, one word, chainable*
 
 | Spoken | Output Format | Example |
 |---|---|---|
@@ -80,7 +81,7 @@
 | proud | Capitalize first | `Hello world` |
 | leap | Capitalize + space | `Hello world ` |
 
-**Prose formatters**
+**Prose formatters** — *greedy*
 
 | Spoken | Output Format | Example |
 |---|---|---|

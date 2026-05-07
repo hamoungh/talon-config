@@ -33,6 +33,36 @@ When asked to change keys/letters/symbols/modes, look here first:
 - Edit actions per OS: [core/edit/edit_win.py](core/edit/edit_win.py), [core/edit/edit_mac.py](core/edit/edit_mac.py)
 - Settings: [settings.talon](settings.talon), [settings/](settings/) (CSVs)
 
+## "How do I make Talon output X?"
+
+Use this when answering "what's the easiest spoken form to produce output X?".
+
+| Desired output                                      | Look here                                                                                                        |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| A single letter `a`–`z`                             | [core/keys/letter.talon-list](core/keys/letter.talon-list)                                                       |
+| A digit `0`–`9`                                     | [core/keys/number_key.talon-list](core/keys/number_key.talon-list)                                               |
+| A symbol (`! @ # $ % ^ & * ( )` etc.)               | [core/keys/symbols.py](core/keys/symbols.py) — `command_and_dictation_forms` work in both modes; `command_forms` only in command mode |
+| Function key `F1`–`F12`                             | [core/keys/function_key.talon-list](core/keys/function_key.talon-list)                                           |
+| Arrow / nav (`up`, `down`, `home`, `end`, …)        | [core/keys/arrow_key.talon-list](core/keys/arrow_key.talon-list), [special_key](core/keys/win/special_key.talon-list) (per-OS) |
+| Modifier chord (`ctrl s`, `cmd shift p`)            | grammar in [core/keys/keystroke.talon](core/keys/keystroke.talon); modifier vocab in per-OS modifier lists       |
+| Repeated keystroke (`3 wipe` → `bksp:3`)            | [core/keys/keystroke.talon](core/keys/keystroke.talon) — extend the existing `<number_small>` patterns           |
+| Formatted word/phrase (camelCase, snake, Title)     | spoken forms in [core/formatters/](core/formatters/), grammar in [core/text/text.talon](core/text/text.talon), implementations in [core/formatters/formatters.py](core/formatters/formatters.py) |
+| Plain prose (typed as-is)                           | dictation mode, or `say <prose>` (greedy) — see formatter note below                                             |
+| Whole-line / selection edits (`line copy`, etc.)    | [core/edit/edit_win.py](core/edit/edit_win.py), [core/edit/edit_mac.py](core/edit/edit_mac.py)                   |
+| App-specific commands                               | `apps/<appname>/` — narrow `.talon` headers (`os:`, `app:`, `tag:`)                                              |
+
+### Formatter greediness (matters when chaining commands in one utterance)
+
+Defined in [core/text/text.talon](core/text/text.talon):
+
+- **Word formatters** ([word_formatter.talon-list](core/formatters/word_formatter.talon-list)) — `word`, `trot`, `proud`, `leap` — eat exactly one `<user.word>` and **chain** with following commands. Example: `proud stack L paren` → `Stack(`.
+- **Code formatters** ([code_formatter.talon-list](core/formatters/code_formatter.talon-list)) — `hammer`, `zake`, `nace`, `hake`, `dotted`, etc. — and **prose formatters** ([prose_formatter.talon-list](core/formatters/prose_formatter.talon-list)) — `say`, `speak`, `sentence`, `title`, `jait` — are **greedy**: their rule is anchored with `$`, so they consume words until end-of-utterance or a `phrase_ender`.
+- The only `phrase_ender` is `over` ([core/text/phrase_ender.talon-list](core/text/phrase_ender.talon-list)) — it terminates the formatted phrase and inserts nothing.
+
+So `hammer stack L paren` does **not** produce `Stack(` (Talon tries to format the whole phrase). Use `proud stack L paren`, or `hammer stack over` *(pause)* `L paren`.
+
+This greedy/non-greedy split mirrors upstream — don't drop the `$` without considering parser ambiguity in long code-formatter chains.
+
 ## Customizations from upstream (current state)
 
 - **Alphabet** ([core/keys/letter.talon-list](core/keys/letter.talon-list)): custom phonetic set — `arch, bat, cage, drum, each, fine, gust, harp, ice, jury, crunch, look, mim, near, orange, pink, quench, red, sun, trap, urge, vest, wick, plex, yank, zip`. Do **not** revert to upstream NATO-style alphabet.
