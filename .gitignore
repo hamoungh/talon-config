@@ -1,3 +1,5 @@
+# Claude Code local settings (machine-specific)
+.claude/
 # Dev stuff
 __pycache__
 *.sw?

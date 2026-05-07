@@ -1,0 +1,17 @@
+list: user.system_paths
+hostname: LenovoHG
+-
+user: C:\Users\hamou
+desktop: C:\Users\hamou\OneDrive\Desktop
+desk: C:\Users\hamou\Desktop
+documents: C:\Users\hamou\OneDrive\Documents
+docks: C:\Users\hamou\Documents
+downloads: C:\Users\hamou\Downloads
+music: C:\Users\hamou\Music
+pictures: C:\Users\hamou\OneDrive\Pictures
+videos: C:\Users\hamou\Videos
+talon home: C:\Users\hamou\AppData\Roaming\talon
+talon recordings: C:\Users\hamou\AppData\Roaming\talon\recordings
+talon user: C:\Users\hamou\AppData\Roaming\talon\user
+profile: C:\Users\hamou
+one drive: C:\Users\hamou\OneDrive
