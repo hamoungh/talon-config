@@ -56,7 +56,7 @@ Use this when answering "what's the easiest spoken form to produce output X?".
 Defined in [core/text/text.talon](core/text/text.talon):
 
 - **Word formatters** ([word_formatter.talon-list](core/formatters/word_formatter.talon-list)) — `word`, `trot`, `proud`, `leap` — eat exactly one `<user.word>` and **chain** with following commands. Example: `proud stack L paren` → `Stack(`.
-- **Code formatters** ([code_formatter.talon-list](core/formatters/code_formatter.talon-list)) — `hammer`, `zake`, `nace`, `hake`, `dotted`, etc. — and **prose formatters** ([prose_formatter.talon-list](core/formatters/prose_formatter.talon-list)) — `say`, `speak`, `sentence`, `title`, `jait` — are **greedy**: their rule is anchored with `$`, so they consume words until end-of-utterance or a `phrase_ender`.
+- **Code formatters** ([code_formatter.talon-list](core/formatters/code_formatter.talon-list)) — `hammer`, `zake`, `nace`, `hake`, `dotted`, etc. — and **prose formatters** ([prose_formatter.talon-list](core/formatters/prose_formatter.talon-list)) — `say`, `speak`, `sentence`, `title` — are **greedy**: their rule is anchored with `$`, so they consume words until end-of-utterance or a `phrase_ender`.
 - The only `phrase_ender` is `over` ([core/text/phrase_ender.talon-list](core/text/phrase_ender.talon-list)) — it terminates the formatted phrase and inserts nothing.
 
 So `hammer stack L paren` does **not** produce `Stack(` (Talon tries to format the whole phrase). Use `proud stack L paren`, or `hammer stack over` *(pause)* `L paren`.

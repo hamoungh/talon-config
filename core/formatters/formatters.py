@@ -186,15 +186,6 @@ def lower(text: str) -> str:
     return text.lower()
 
 
-def capitalize_each_word(text: str) -> str:
-    """Capitalize the first letter of each whitespace-delimited word, preserving spacing."""
-    parts = [x for x in re.split(r"(\s+)", text) if x]
-    for i, part in enumerate(parts):
-        if part.isspace():
-            continue
-        parts[i] = part.capitalize()
-    return "".join(parts)
-
 
 def unformat_upper(text: str) -> str:
     return text.lower() if text.isupper() else text
@@ -239,7 +230,6 @@ formatter_list = [
 
     CustomFormatter("REMOVE_FORMATTING", remove_code_formatting),
     TitleFormatter("CAPITALIZE_ALL_WORDS"),
-    CustomFormatter("EACH_WORD_CAPITALIZE", capitalize_each_word),
     # The sentence formatter being called `CAPITALIZE_FIRST_WORD` is a bit of a misnomer, but kept for backward compatibility.
     SentenceFormatter("CAPITALIZE_FIRST_WORD"),
     # This is the formatter that actually just capitalizes the first word
